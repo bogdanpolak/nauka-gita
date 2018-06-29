@@ -15,21 +15,20 @@ W czasie tych testów chciałbym sprawdzić jak można modyfikować historię w 
     - Możliwości (dla każdej rewizji wchodzącej w skład operacji rebase: 
         - p pick - użyj rewizji
         - r reword - użyj ze zmianą opisu rewizji (komunikatu)
-        - e edit - użyj rewizji, ale zatrzymaj się na korekty (ammend)
+        - e edit - użyj rewizji, ale zatrzymaj się na korekty (amend)
         - s squash - użyj rewizji ale wciel ją w poprzednią rewizję
         - f fixup - jak squash, ale pomiń komunikat loga
         - x exec - uruchom polecenie shell'a
         - d drop - odrzuć rewizję
 3. Rebase - zmiana bazy dla rozgałęzienia
     - Standardowe zastosowanie rebase
-    - Sytuacja: pracujęmy na rozgałęzieniu (dla przykładu nazwanym: eksperyment) i chcemy wstawić zmiany z gałęzi eksperyment do master'a tak jakby były wykonywane ma gałęzi głównej.
-    ![Stan przed reabase](https://git-scm.com/figures/18333fig0327-tn.png) 
-    - Wykonujemy następujace polecenia:
-        ```sh
-git checkout experiment
-$ git rebase master
-        ```
-    ![Stan po reabase](https://git-scm.com/figures/18333fig0329-tn.png) 
+    - Sytuacja: pracujemy na rozgałęzieniu (dla przykładu nazwanym: eksperyment) i chcemy wstawić zmiany z gałęzi eksperyment do master'a tak jakby były wykonywane ma gałęzi głównej.
+    ![Stan przed rebase](https://git-scm.com/figures/18333fig0327-tn.png) 
+    - Wykonujemy następujące polecenia:   
+    **```git checkout experiment```**  
+    **```git rebase master```**
+    - Stan po rebase    
+    ![Stan po rebase](https://git-scm.com/figures/18333fig0329-tn.png) 
 3. Rebase na zdalnym origin/master oraz hast reset na master
 
 = Narzędzia pomocnicze
