@@ -48,6 +48,20 @@ git rebase master
 
 ## Rebase na zdalnym origin/master oraz hast reset na master
 
+TBD ...
+
+# TODO
+1. Do zrobienia:
+    - opisanie: ```git push origin master --force```
+    - opisanie: rebase i squash
+    - przetestowanie i opisanie: ```git reset --hard```
+    - opisanie merge
+2. Linki do przejrzenia i analizy:
+    - [Doc: Zmiana bazy](https://git-scm.com/book/pl/v1/Gałęzie-Gita-Zmiana-bazy)
+    - [Blog: Always Squash and Rebase your Git Commits](https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/)
+    - [Stack: git log shows (origin) without any branch](https://stackoverflow.com/questions/42445001/git-log-shows-origin-without-any-branch)
+
+
 # Narzędzia pomocnicze
 
 Do przeglądania historii rewizji służy polecenie log
