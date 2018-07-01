@@ -1,3 +1,8 @@
+# Place for experiments
+
+Hovercraft
+
+Hovercrafts are lots of fun, and a great way to demonstrate the power of moving air. Here are the instructions to build a hovercraft of your own that you can ride on. Construction time can be as little as a few hours. These plans are based on the plans we used for the hovercraft built for Jimmy Kimmel Live.
 
 
 # Dillinger
@@ -41,7 +46,7 @@ Dillinger uses a number of open source projects to work properly:
 * [Ace Editor] - awesome web-based text editor
 * [markdown-it] - Markdown parser done right. Fast and easy to extend.
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [node.js] - evented I/O for the backend
+* [node.js] - event driven I/O for the backend
 * [Express] - fast node.js network app framework [@tjholowaychuk]
 * [Gulp] - the streaming build system
 * [Breakdance](http://breakdance.io) - HTML to Markdown converter
