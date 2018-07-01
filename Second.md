@@ -1,8 +1,12 @@
 # Place for experiments
 
-Hovercraft
+### Hovercraft
 
 Hovercrafts are lots of fun, and a great way to demonstrate the power of moving air. Here are the instructions to build a hovercraft of your own that you can ride on. Construction time can be as little as a few hours. These plans are based on the plans we used for the hovercraft built for Jimmy Kimmel Live.
+
+### Eggshell Geode Crystals
+
+This project comes to us from Melissa Howard who is a Mom, Blogger, and photographer. This project nicely demonstrates how real-life geodes are formed in igneous and sedimentary rock. It also demonstrates super-saturated solutions and shows a nice variety of crystal shapes and formations.
 
 
 # Dillinger
@@ -184,8 +188,3 @@ MIT
    [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
    [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
    [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
-
-Eggshell Geode Crystals
-
-Eggshell Geode Crystals
-This project comes to us from Melissa Howard who is a Mom, Blogger, and photographer. This project nicely demonstrates how real-life geodes are formed in igneous and sedimentary rock. It also demonstrates super-saturated solutions and shows a nice variety of crystal shapes and formations.
