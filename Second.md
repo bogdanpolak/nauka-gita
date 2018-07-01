@@ -19,6 +19,11 @@ Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered H
   - See HTML in the right
   - Magic
 
+> Density is a fascinating and sometimes tricky idea to understand. This Drink of Density will help bring home the idea of density in liquids, not to mention it looks cool when your all done, it’s tasty, and it’s even good for you – what more could you ask for in a science activity!
+>
+> You will need:
+> Juices that have different density levels. (see below for a simple explanation of density) The density of a juice is often determined by how much sugar or fruit is in it – the more sugar or fruit, the more dense the juice is. Powdered and canned juices do not work well for this experiment since they are almost entirely water. You will have to do some experimentation to find juices that are colorful and give a nice display of density, and that’s half the fun.
+
 # New Features!
 
   - Import a HTML file and watch it magically convert to Markdown
