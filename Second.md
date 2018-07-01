@@ -8,6 +8,12 @@ Hovercrafts are lots of fun, and a great way to demonstrate the power of moving 
 
 This project comes to us from Melissa Howard who is a Mom, Blogger, and photographer. This project nicely demonstrates how real-life geodes are formed in igneous and sedimentary rock. It also demonstrates super-saturated solutions and shows a nice variety of crystal shapes and formations.
 
+### Drink of Density
+
+Density is a fascinating and sometimes tricky idea to understand. This Drink of Density will help bring home the idea of density in liquids, not to mention it looks cool when your all done, it’s tasty, and it’s even good for you – what more could you ask for in a science activity!
+
+You will need: juices that have different density levels. The density of a juice is often determined by how much sugar or fruit is in it – the more sugar or fruit, the more dense the juice is. Powdered and canned juices do not work well for this experiment since they are almost entirely water. You will have to do some experimentation to find juices that are colorful and give a nice display of density, and that’s half the fun.
+
 
 # Dillinger
 
@@ -19,16 +25,10 @@ Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered H
   - See HTML in the right
   - Magic
 
-> Density is a fascinating and sometimes tricky idea to understand. This Drink of Density will help bring home the idea of density in liquids, not to mention it looks cool when your all done, it’s tasty, and it’s even good for you – what more could you ask for in a science activity!
->
-> You will need:
-> Juices that have different density levels. (see below for a simple explanation of density) The density of a juice is often determined by how much sugar or fruit is in it – the more sugar or fruit, the more dense the juice is. Powdered and canned juices do not work well for this experiment since they are almost entirely water. You will have to do some experimentation to find juices that are colorful and give a nice display of density, and that’s half the fun.
-
 # New Features!
 
   - Import a HTML file and watch it magically convert to Markdown
   - Drag and drop images (requires your Dropbox account be linked)
-
 
 You can also:
   - Import and save files from GitHub, Dropbox, Google Drive and One Drive
