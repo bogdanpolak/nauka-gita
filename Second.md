@@ -1,3 +1,18 @@
+# Place for experiments
+
+### Hovercraft
+
+Hovercrafts are lots of fun, and a great way to demonstrate the power of moving air. Here are the instructions to build a hovercraft of your own that you can ride on. Construction time can be as little as a few hours. These plans are based on the plans we used for the hovercraft built for Jimmy Kimmel Live.
+
+### Eggshell Geode Crystals
+
+This project comes to us from Melissa Howard who is a Mom, Blogger, and photographer. This project nicely demonstrates how real-life geodes are formed in igneous and sedimentary rock. It also demonstrates super-saturated solutions and shows a nice variety of crystal shapes and formations.
+
+### Drink of Density
+
+Density is a fascinating and sometimes tricky idea to understand. This Drink of Density will help bring home the idea of density in liquids, not to mention it looks cool when your all done, it’s tasty, and it’s even good for you – what more could you ask for in a science activity!
+
+You will need: juices that have different density levels. The density of a juice is often determined by how much sugar or fruit is in it – the more sugar or fruit, the more dense the juice is. Powdered and canned juices do not work well for this experiment since they are almost entirely water. You will have to do some experimentation to find juices that are colorful and give a nice display of density, and that’s half the fun.
 
 
 # Dillinger
@@ -14,7 +29,6 @@ Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered H
 
   - Import a HTML file and watch it magically convert to Markdown
   - Drag and drop images (requires your Dropbox account be linked)
-
 
 You can also:
   - Import and save files from GitHub, Dropbox, Google Drive and One Drive
@@ -41,7 +55,7 @@ Dillinger uses a number of open source projects to work properly:
 * [Ace Editor] - awesome web-based text editor
 * [markdown-it] - Markdown parser done right. Fast and easy to extend.
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [node.js] - evented I/O for the backend
+* [node.js] - event driven I/O for the backend
 * [Express] - fast node.js network app framework [@tjholowaychuk]
 * [Gulp] - the streaming build system
 * [Breakdance](http://breakdance.io) - HTML to Markdown converter
