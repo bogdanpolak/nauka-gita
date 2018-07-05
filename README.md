@@ -6,6 +6,7 @@ Notatki mają mi pomóc w utrwaleniu kluczowych informacji na temat systemu Git.
 
 * [Modyfikacja historii repozytorium](./HistoryModification.md)
 * [Notatki z GitPro](./GitProNotes.md)
+* [Notatki podręczne / wycinki](./QuickNotes.md)
 
 # Narzędzia pomocnicze
 
