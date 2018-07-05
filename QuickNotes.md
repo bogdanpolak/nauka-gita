@@ -19,7 +19,9 @@ all changes
 git fetch
 git reset --hard origin/master
 
+New branch based on origin
 
+git checkout origin/master -b <new branch name>
 
 ## Git workflow diagram
 
