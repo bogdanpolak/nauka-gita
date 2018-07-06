@@ -15,16 +15,6 @@ Density is a fascinating and sometimes tricky idea to understand. This Drink of 
 You will need: juices that have different density levels. The density of a juice is often determined by how much sugar or fruit is in it – the more sugar or fruit, the more dense the juice is. Powdered and canned juices do not work well for this experiment since they are almost entirely water. You will have to do some experimentation to find juices that are colorful and give a nice display of density, and that’s half the fun.
 
 
-# Dillinger
-
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
-Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
-
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
-
 # New Features!
 
   - Import a HTML file and watch it magically convert to Markdown
