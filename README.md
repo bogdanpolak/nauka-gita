@@ -8,6 +8,10 @@ Notatki mają mi pomóc w utrwaleniu kluczowych informacji na temat systemu Git.
 * [Notatki z GitPro](./GitProNotes.md)
 * [Notatki podręczne / wycinki](./QuickNotes.md)
 
+# Artykuły (do przeczytania)
+
+* [Artykuły i wpisy na blogach](./ArticlesAndBlogs.md)
+
 # Narzędzia pomocnicze
 
 Do przeglądania historii rewizji służy polecenie log
