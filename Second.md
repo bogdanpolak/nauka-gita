@@ -14,6 +14,15 @@ Density is a fascinating and sometimes tricky idea to understand. This Drink of 
 
 You will need: juices that have different density levels. The density of a juice is often determined by how much sugar or fruit is in it – the more sugar or fruit, the more dense the juice is. Powdered and canned juices do not work well for this experiment since they are almost entirely water. You will have to do some experimentation to find juices that are colorful and give a nice display of density, and that’s half the fun.
 
+### Inertia Experiment
+
+This basic experiment using a pen cap, a bottle, and a crochet hoop demonstrates one of Sir Isaac Newton's most fundamental principles — "an object at rest stays at rest."
+
+[watch on the YouTube >](https://www.youtube.com/watch?v=uOSBC0SXVR4)
+
+### More experiments
+
+* [Scholastic - 40 Cool Science Experiments on the Web](https://www.scholastic.com/teachers/articles/teaching-content/40-cool-science-experiments-web/)
 
 # New Features!
 
