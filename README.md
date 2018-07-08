@@ -4,12 +4,13 @@ Notatki mają mi pomóc w utrwaleniu kluczowych informacji na temat systemu Git.
 
 # Materiały
 
+* [Praca z gałęziami](./WorkingWithBranches.md)
 * [Modyfikacja historii repozytorium](./HistoryModification.md)
+
+# Notatki
+
 * [Notatki z GitPro](./GitProNotes.md)
 * [Notatki podręczne / wycinki](./QuickNotes.md)
-
-# Artykuły (do przeczytania)
-
 * [Artykuły i wpisy na blogach](./ArticlesAndBlogs.md)
 
 # Narzędzia pomocnicze
