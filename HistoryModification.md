@@ -1,10 +1,9 @@
 # Modyfikacja historii repozytorium.
 
 Tematy:
-* Scalanie
-* Drobne korekty
+* Drobne korekty ostatniej rewizji
 * Zmiana bazy
-* Sklejanie (zgniatanie) commit'ów
+* Interaktywna zmiana bazy (z możliwością zgniatania rewizji)
 
 ## Informacja wprowadzająca
 
@@ -22,9 +21,27 @@ W czasie tych testów chciałbym sprawdzić jak można modyfikować historię w 
 
 ## Zmiana bazy (git rebase)
 
-Polecenie rebase pozwala zmieniać historię kilku rewizji oraz przenosić zmiany między rozgałęzieniami.
+Polecenie rebase pozwala przenosić kilka rewizji z jednej gałęzi do innej bez konieczności scalania.
 
-Możliwe operacje w przypadku interaktywnego rebase (dla każdej rewizji): 
+**Sytuacja:** pracujemy na rozgałęzieniu (dla przykładu nazwanym: eksperyment) i chcemy wstawić zmiany z gałęzi eksperyment do master'a tak jakby były wykonywane ma gałęzi głównej.  
+![Stan przed rebase](https://git-scm.com/figures/18333fig0327-tn.png)   
+
+Wykonujemy następujące polecenia:  
+
+```
+git checkout experiment
+git rebase master
+```  
+
+**Stan po rebase:**  
+![Stan po rebase](https://git-scm.com/figures/18333fig0329-tn.png) 
+
+## Interaktywna zmiana bazy (git rebase -i)
+
+Interaktywny rebabase dodatkowo wzbogaca polecenie zmiany bazy o możliwość skorygowania każdej rewisji, scalenia jej z wcześniejszą lub nawet jej pominęcia w czasie przenoszenia zmian z jednej gałęzi do drugiej. Czyli poza standardowym odtwarzaniem zmian na innej gałęzi interaktywna zmiana bazy pozwala zmieniać historię rewizji.
+
+Interaktywna zmiana bazy pozwala wykonać następujące operacje na każdej z rewizji:
+
 - p pick - użyj rewizji
 - r reword - użyj ze zmianą opisu rewizji (komunikatu)
 - e edit - użyj rewizji, ale zatrzymaj się na korekty (amend)
@@ -33,20 +50,7 @@ Możliwe operacje w przypadku interaktywnego rebase (dla każdej rewizji):
 - x exec - uruchom polecenie shell'a
 - d drop - odrzuć rewizję
 
-## Zmiana bazy dla rozgałęzienia
-
-Jest to standardowe zastosowanie rebase
-- Sytuacja: pracujemy na rozgałęzieniu (dla przykładu nazwanym: eksperyment) i chcemy wstawić zmiany z gałęzi eksperyment do master'a tak jakby były wykonywane ma gałęzi głównej.  
-![Stan przed rebase](https://git-scm.com/figures/18333fig0327-tn.png)   
-Wykonujemy następujące polecenia:  
-```
-git checkout experiment
-git rebase master
-```  
-- Stan po rebase:  
-![Stan po rebase](https://git-scm.com/figures/18333fig0329-tn.png) 
-
-## Rebase na zdalnym origin/master oraz hast reset na master
+## Rebase na zdalnym origin/master oraz hard reset na master
 
 TBD ...
 
