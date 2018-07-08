@@ -38,7 +38,7 @@ git rebase master
 
 ## Interaktywna zmiana bazy (git rebase -i)
 
-Interaktywny rebabase dodatkowo wzbogaca polecenie zmiany bazy o możliwość skorygowania każdej rewisji, scalenia jej z wcześniejszą lub nawet jej pominęcia w czasie przenoszenia zmian z jednej gałęzi do drugiej. Czyli poza standardowym odtwarzaniem zmian na innej gałęzi interaktywna zmiana bazy pozwala zmieniać historię rewizji.
+Interaktywny zmiana bazy (rebase) dodatkowo wzbogaca polecenie zmiany bazy o możliwość skorygowania każdej rewizji, scalenia jej z wcześniejszą lub nawet jej pominięcia w czasie przenoszenia zmian z jednej gałęzi do drugiej. Czyli poza standardowym odtwarzaniem zmian na innej gałęzi interaktywna zmiana bazy pozwala zmieniać historię rewizji.
 
 Interaktywna zmiana bazy pozwala wykonać następujące operacje na każdej z rewizji:
 
@@ -62,6 +62,4 @@ TBD ...
     - opisanie merge
 2. Linki do przejrzenia i analizy:
     - [Doc: Zmiana bazy](https://git-scm.com/book/pl/v1/Gałęzie-Gita-Zmiana-bazy)
-    - [Blog: Always Squash and Rebase your Git Commits](https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/)
-    - [Stack: git log shows (origin) without any branch](https://stackoverflow.com/questions/42445001/git-log-shows-origin-without-any-branch)
 
