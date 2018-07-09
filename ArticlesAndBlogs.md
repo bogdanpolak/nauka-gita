@@ -9,3 +9,9 @@
     * [BP] Przenieś polecenia git do mojego artykułu o modyfikacjach historii w Git
 
 
+* [JQuery contributing guide](https://contribute.jquery.org/commits-and-pull-requests/)
+    * Zasady tworzenia nowych rewizji i zgłaszania zmian w projekcie JQuery
+    * Między innymi: co powinna zawierać pojedyncza rewizja i jak ją nazywać
+* [Contributing to AngularJS](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md)
+    * Analogicznie jak powyżej
+
