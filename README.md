@@ -5,6 +5,7 @@ Notatki mają mi pomóc w utrwaleniu kluczowych informacji na temat systemu Git.
 # Materiały
 
 * [Praca z gałęziami](./WorkingWithBranches.md)
+* [Poruszanie się po historii](./MovingAroundHistory.md)
 * [Modyfikacja historii repozytorium](./HistoryModification.md)
 
 # Notatki
