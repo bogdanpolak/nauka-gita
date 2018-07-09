@@ -2,6 +2,7 @@
 
 Tematy:
 * Drobne korekty ostatniej rewizji
+* Użycie polecenia ```git reset```
 * Zmiana bazy
 * Interaktywna zmiana bazy (z możliwością zgniatania rewizji)
 
@@ -15,21 +16,38 @@ Tematy:
 - korekta bez zmiany opisu rewizji, opcja: --no-edit  
     **```git commit --amend --no-edit```** 
 
-## Nadpisywanie historii i scalanie historii
+## Nadpisywanie historii lokalnego repozytorium
 
 > Uwaga! Nadpisywanie historii zapisanej na współdzielonym serwerze (np. gałęzi ```master``` na serwerze ```origin```) jest operacją bardzo niebezpieczną i nie powinna być używana. W szczególności dotyczy to repozytoriów centralnych, z których korzysta wiele osób.
 
-Nadpisanie historii lokalnej gałęzi głównej czyli ```master```, aktualną historią serwera centralnego.
+Nadpisanie historii lokalnej gałęzi głównej ```master``` aktualną historią z serwera centralnego ```origin```.
 
 ```
 git fetch
 git reset --hard origin/master
 ```
 
+**Uwaga!** Po takiej operacji wszystkie różnice znajdujące się się w lokalnej gałęzi ```master``` oraz katalogu roboczym zostaną nadpisane przez wersje z serwera centralnego, czyli zostaną bezpowrotnie utracone.
+
 Polecenie ```git reset``` działa w trzech trybach:
+
 - ```--soft``` = modyfikuje bieżącą gałąź (lokalną)
 - ```--mixed``` = j.w. plus modyfikuje poczekalnię (Index) (Staging Area)
 - ```--hard``` = j.w. dodatkowo modyfikuje roboczy katalog
+
+Typowe użycie ```git reset``` to cofniecie zmian do ustalonego wcześniej commit'a:
+
+```
+$ git log --oneline
+00e6225 (HEAD -> master, origin/master) Dadano sekcję git reset
+a872d95 Dodano nowe inki do artykułów
+51e7151 Nowa strona: praca z gałęziami
+$ git reset 51e7151
+```
+
+> **TODO:** Jak działa git reset bez parametrów?
+
+## Scalanie przy użyciu ```git reset```
 
 Przykład użycia ```git reset --mixed``` do scalenia zmian w dwóch ostatnich rewizjach lokalnego repozytorium
 
@@ -41,7 +59,7 @@ git commit
 Efekt końcowy wykonanych operacji (rewizja ```81ae807``` początkowo była głową aktualnej gałęzi):
 ![Diagram jak działa zgniatanie historii](./assets/img/git-reset-for-sqash-hist.png)
 
-> **TODO:** (1) Jak działa git reset bez parametrów? (2) Jakie są różnice między git reset a git checkout
+> **TODO:** Jakie są różnice między git reset a git checkout
 
 ## Zmiana bazy (git rebase)
 
