@@ -5,10 +5,6 @@ Tematy:
 * Zmiana bazy
 * Interaktywna zmiana bazy (z możliwością zgniatania rewizji)
 
-## Informacja wprowadzająca
-
-W czasie tych testów chciałbym sprawdzić jak można modyfikować historię w repozytorium. Do przećwiczenia mam następujące kroki:
-
 ## Drobne poprawki (amend)
 
 - amend = poprawka
@@ -18,6 +14,34 @@ W czasie tych testów chciałbym sprawdzić jak można modyfikować historię w 
 - polecenie amend może zostać użyte do zmiany opisu
 - korekta bez zmiany opisu rewizji, opcja: --no-edit  
     **```git commit --amend --no-edit```** 
+
+## Nadpisywanie historii i scalanie historii
+
+> Uwaga! Nadpisywanie historii zapisanej na współdzielonym serwerze (np. gałęzi ```master``` na serwerze ```origin```) jest operacją bardzo niebezpieczną i nie powinna być używana. W szczególności dotyczy to repozytoriów centralnych, z których korzysta wiele osób.
+
+Nadpisanie historii lokalnej gałęzi głównej czyli ```master```, aktualną historią serwera centralnego.
+
+```
+git fetch
+git reset --hard origin/master
+```
+
+Polecenie ```git reset``` działa w trzech trybach:
+- ```--soft``` = modyfikuje bieżącą gałąź (lokalną)
+- ```--mixed``` = j.w. plus modyfikuje poczekalnię (Index) (Staging Area)
+- ```--hard``` = j.w. dodatkowo modyfikuje roboczy katalog
+
+Przykład użycia ```git reset --mixed``` do scalenia zmian w dwóch ostatnich rewizjach lokalnego repozytorium
+
+```
+git reset --soft HEAD~2
+git commit
+```
+
+Efekt końcowy wykonanych operacji (rewizja ```81ae807``` początkowo była głową aktualnej gałęzi):
+![Diagram jak działa zgniatanie historii](./assets/img/git-reset-for-sqash-hist.png)
+
+> **TODO:** (1) Jak działa git reset bez parametrów? (2) Jakie są różnice między git reset a git checkout
 
 ## Zmiana bazy (git rebase)
 
