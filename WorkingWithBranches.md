@@ -51,7 +51,7 @@ Aktualizacja zapamiętanej lokalnie listy zdalnych gałęzi w śledzonych zdalny
 
 ```
 git fetch -p origin
-git `fetch --prune` origin
+git fetch --prune origin
 ```
 
 Angielski opis z dokumentacji ```fetch --prune```
