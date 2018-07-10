@@ -9,8 +9,11 @@
     * [BP] Przenieś polecenia git do mojego artykułu o modyfikacjach historii w Git
 
 * [Why you should stop using Git rebase](https://medium.com/@fredrikmorken/why-you-should-stop-using-git-rebase-5552bee4fed1) - Fredrik V. MørkenFollow, 2017-08-15
-    * Dlaczego niepowinieneś używać zmiany bazy
-    * kontrartykuł
+    * **Stan:** [Przeczytany]
+    * **Cel:** Super fajne animacje operacji *merge* i *rebase*
+    * **Treść:** Dlaczego nie powinieneś używać zmiany bazy?
+    * Główny argument to ryzyko zaburzania spójności kodu w momencie zmiany bazy. Jeśli juz musisz używać ```rebase``` to sprawdzaj spójność kodu (kompilowanie / testy jednostkowe)
+    * Liniowa historia w Gicie jest kusząca, ale to szlaków pociągowych ```train tracks``` można się przyzwyczaić. Warto skorzystać z dobrych narzędzi do wizualizacji: [GitUp dla OS X](https://github.com/git-up/GitUp)
 
 * [JQuery contributing guide](https://contribute.jquery.org/commits-and-pull-requests/)
     * Zasady tworzenia nowych rewizji i zgłaszania zmian w projekcie JQuery
