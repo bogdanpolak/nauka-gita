@@ -14,7 +14,7 @@ Historia rewizji zapisana zostaje w następujący sposób:
 
 Każda rewizja pamięta swojego rodzica, czyli wersję wcześniejszą.
 
-> Źródło: https://git-scm.com/book/pl/v2/Gałęzie-Gita-Czym-jest-gałąź
+> Źródło: [GitPro rozdział 3.1: Gałęzie Gita -  Czym jest gałąź](https://git-scm.com/book/pl/v2/Gałęzie-Gita-Czym-jest-gałąź)
 
 ## Wskaźniki do rewizji
 
@@ -68,14 +68,21 @@ git checkout HEAD^^^
 git checkout deed4fd~2
 ```
 
-## Detached HEAD
+> **TODO:** Dodać obrazki i opis do obrazków
 
->**TODO:** Przetłumaczyć i opisać
 
-> This is called a detached HEAD. Example commands that will cause your HEAD to become detached (ouch!) are[1]:
+## Odczepiona głowa (detached HEAD)
+
+**Głowa przyczepiona.** Jeśli aktualna pozycja, czyli HEAD wskazuje na którąś z gałęzi (lokalnych) to taką głową nazywamy przyczepioną, co oznacza, że każda nowa rewizja (commit) przesuwa ją razem ze znaczniem gałęzi (tak jak to pokazano na diagramie powyżej).
+
+**Głowa odczepiona.** Natomiast jeżeli ```HEAD``` wskazuje bezpośrednio na rewizję to wtedy taki stan git nazywa: *detached HEAD*. Wprowadzanie nowych rewizji w takim stanie nie jest zalecane, dlatego jeśli chcemy to robić na odczepionej głowie to takie przesunięcie (```git checkout```) powinno być połączone z dodaniem nowej gałęzi (opcja ```-b <nazwa nowej gałęzi>```), tak jak na poniższym przykładzie
+
 ```
-git checkout master^        # parent of master
-git checkout HEAD~2         # grandparent of current HEAD
-git checkout origin/master  # a non-local branch
-git checkout tagname        # since you cant commit to a tag!
+git checkout v0.3.13 -b analiza-źródła-błędu
 ```
+
+## Przesuwanie wskaźników gałęzi (lokalnych)
+
+> **TODO:** Opisać ```git reset```
+
+![Przesunięcie wskaźnika po operacji reset](./assets/img/img-move-after-reset.png)
