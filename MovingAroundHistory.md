@@ -21,7 +21,7 @@ Każda rewizja pamięta swojego rodzica, czyli wersję wcześniejszą.
 Git ma kilka rodzajów wskaźników do rewizji.
 
 * ```HEAD``` - aktualnie używana rewizja
-* **Znacznik (tag)** - nazwany wskaźnik ustawiany na wybraną rewizję, służy do zapamiętania historycznej wersji repozytorium
+* **Etykieta (tag)** - nazwany wskaźnik ustawiany na wybraną rewizję, służy do zapamiętania historycznej wersji repozytorium
 * **Gałąź (branch)** - pozwala na dodawanie nowych wersji, przesuwa się razem ze zmianami. Możliwe jest scalanie gałęzi
 * **master** - domyślnie zakładana gałąź (główna), zachowuje się analogicznie jak każda inna gałąź
 
@@ -48,7 +48,7 @@ Do przesuwania wskaźnika HEAD służy operacja ```git checkout```. Wskaźnik te
 * podając identyfikator rewizji (nr SHA1 lub jego skróconą wersję, czyli pierwsze 7 znaków)
 * podając nazwę gałęzi lokalnej
 * podając nazwę gałęzi zdalnej (o ile informacje o tej gałęzi zostały pobrane ze zdalnego serwera)
-* podając nazwę znacznika (tag)
+* podając nazwę etykiety (tag)
 * odwołując się względem aktualniej głowy (np. dwie rewizje wcześniej)
 * odwołując się względem dowolnej pozycji
 
@@ -73,7 +73,7 @@ git checkout deed4fd~2
 
 ## Odczepiona głowa (detached HEAD)
 
-**Głowa przyczepiona.** Jeśli aktualna pozycja, czyli HEAD wskazuje na którąś z gałęzi (lokalnych) to taką głową nazywamy przyczepioną, co oznacza, że każda nowa rewizja (commit) przesuwa ją razem ze znaczniem gałęzi (tak jak to pokazano na diagramie powyżej).
+**Głowa przyczepiona.** Jeśli aktualna pozycja, czyli HEAD wskazuje na którąś z gałęzi (lokalnych) to taką głową nazywamy przyczepioną, co oznacza, że każda nowa rewizja (commit) przesuwa ją razem ze wskaźnikiem gałęzi (tak jak to pokazano na diagramie powyżej).
 
 **Głowa odczepiona.** Natomiast jeżeli ```HEAD``` wskazuje bezpośrednio na rewizję to wtedy taki stan git nazywa: *detached HEAD*. Wprowadzanie nowych rewizji w takim stanie nie jest zalecane, dlatego jeśli chcemy to robić na odczepionej głowie to takie przesunięcie (```git checkout```) powinno być połączone z dodaniem nowej gałęzi (opcja ```-b <nazwa nowej gałęzi>```), tak jak na poniższym przykładzie
 
