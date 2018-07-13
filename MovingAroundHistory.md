@@ -27,10 +27,6 @@ Git ma kilka rodzajów wskaźników do rewizji.
 
 ![Wskaźniki do historii](https://git-scm.com/book/en/v2/images/branch-and-history.png)
 
-Git podobnie jak każdy system wersjonowania plików pozwala rozgałęziać historię. Realizowane jest to dzięki wykorzystaniu wskaźników:
-
-![Rozgałęziona historia](https://git-scm.com/book/en/v2/images/advance-master.png)
-
 ## Przesuwanie przy zatwierdzaniu zmian
 
 Najczęściej wskaźniki ```HEAD``` oraz wskaźnik bieżącej gałęzi są przesuwane przez polecenie **```git commit```**.

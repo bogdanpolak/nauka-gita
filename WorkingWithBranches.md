@@ -29,6 +29,16 @@ git checkout patchBP
 
 TBD
 
+## Rozgałęzianie historii
+
+Gałąź w Git to lekki obiekt (ma niewielki rozmiar), który wskazuje na najnowszą zmianę (rewizję) wykonaną w tej gałęzi. Wprowadzając zmianę raz w jednej gałęzi, a następnie w drugiej możemy rozgałęzić historię rewizji naszego repozytorium.
+
+Git podobnie jak każdy system wersjonowania plików pozwala rozgałęziać historię, jednak w tym przypadku jest to wyjątkowo lekka i bardzo bezpieczna operacja. Polega na stworzeniu w strukturach repozytorium nowego obiektu, który wskazuję aktualną rewizję. Obiekt ten nazywamy gałęzią (branch). Gałąź nie tworzy kopii swojej własnej historii, ale jedynie wskazuje miejsce w drzewie rewizji, czyli w historii repozytorium.
+
+![Rozgałęziona historia](https://git-scm.com/book/en/v2/images/advance-master.png)
+
+## Gałęzie lokalne i zdalne
+
 ## Porządkowanie gałęzi lokalnych (usuwanie zbędnych)
 
 Lista gałęzi scalonych z gałęzią główną (master) 
