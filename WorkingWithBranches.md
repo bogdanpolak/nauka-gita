@@ -5,13 +5,13 @@
 Do tworzenia oraz do zarządzania gałęziami służy głównie polecenie ```git branch```. Dodanie nowej gałęzi można zlecić dodając nazwę gałęzi. Nazwa gałęzi musi być unikalna i nie może być powtórzona.
 
 ```
-git branch patch59
+git branch poprawka59
 ```
 
 Podobnie usunięcie gałęzi jest wykonuje się tym samym poleceniem dodając opcję ```-d``` lub ```--delete```.
 
 ```
-git branch -d patch59
+git branch -d poprawka59
 ```
 
 Usuwać w ten sposób nie można gałęzi, które nie zostały scalona z resztą drzewa. Blokada ta wynika z faktu, że taka gałąź może zniknąć z loga (historii zmian) jeśli usuniemy wskaźnik do niej (w tym wypadku takim wskaźnikiem jest gałąź). W artykule [Poruszanie się po historii](./MovingAroundHistory.md) opisuję, dlaczego tak się dzieje.
@@ -19,20 +19,31 @@ Usuwać w ten sposób nie można gałęzi, które nie zostały scalona z resztą
 Jeśli mimo powyższej blokady chcemy usunąć gałąź, która nie została scalona to taką operację musimy wymusić opcją ```--force``` lub ```-f```, w skrócie zamiast pisać ```-df``` możemy napisać ```-D```:
 
 ```
-git branch -d poprawka59
+git branch -D poprawka59
 ```
 
 W strukturach repozytorium gałąź jest obiektem, który wskazuję na aktualną rewizję, z kolei ta rewizja wskazuje na wcześniejszą rewizję (wersję) itd. Czyli struktura przykładowego repozytorium z jedną gałęzią ```master``` mogłaby wyglądać w ten sposób:
 
 ![Po operacji commit](./assets/img/git-commit-before.png)
 
-Usuwając lub dodając gałąź do repozytorium robimy tylko drobną korektę, nie zaburzając, a nie nie przebudowując aktualnej struktury rewizji.
+Usuwając lub dodając gałąź do repozytorium robimy tylko prostą operacje usunięcia lub dodania nowego obiektu wskazującego na bierzące miejsce, czyli ```HEAD```. Nie zaburzamy, ani nie przebudowujemy aktualnej struktury repozytorium.
 
-Jeśli mamy gałąź ```poprawka59``` ustawioną wcześniej na drzewku historii i chcemy ją przestawić na aktualne miejsc to system git wykona operację taką jakbyś usunęli starą gałąź i dodali nową, co można zrobić przy pomocy opcji ```-f```
+Równie łatwo można przesuwać wskaźnik gałęzi w aktualne miejsce. Spojrzmy na przykład:
+
+A -> B -> C -> HEAD (master)
+^--- poprawka59
+> **TODO:** Narysowć schemat
+
+Gałąź ```poprawka59``` ustawioną jest na wcześniejszej rewizji, jeśli chcemy ją przestawić na aktualne miejsce to możemy usunąć gałąź i od razu ją dodać lub też wystarczy tylko dodać gałęź ```poprawka59``` z opcją ```-f``` lub ```--force```
 
 ```
 git branch -f poprawka59
 ```
+
+W wyniku otrzymamy następującą sytuację:
+
+A -> B -> C -> HEAD (master) (poprawka59)
+> **TODO:** Narysowć schemat
 
 # Przełączanie między gałęziami
 
@@ -69,7 +80,7 @@ git checkout patchBP
 
 ## Rozgałęzianie historii
 
-Gałąź w Git to lekki obiekt (ma niewielki rozmiar), który wskazuje na najnowszą zmianę (rewizję) wykonaną w tej gałęzi. Wprowadzając zmianę raz w jednej gałęzi, a następnie w drugiej możemy rozgałęzić historię rewizji naszego repozytorium.
+Gałąź w Git to lekki obiekt (ma niewielki rozmiar), który wskazuje na najnowszą zmianę (rewizję). Wprowadzając zmianę raz w jednej gałęzi, a następnie w drugiej możemy rozgałęzić historię rewizji naszego repozytorium.
 
 Git podobnie jak każdy system wersjonowania plików pozwala rozgałęziać historię, jednak w tym przypadku jest to wyjątkowo lekka i bardzo bezpieczna operacja. Polega na stworzeniu w strukturach repozytorium nowego obiektu, który wskazuję aktualną rewizję. Obiekt ten nazywamy gałęzią (branch). Gałąź nie tworzy kopii swojej własnej historii, ale jedynie wskazuje miejsce w drzewie rewizji, czyli w historii repozytorium.
 
