@@ -26,13 +26,11 @@ W strukturach repozytorium gałąź jest obiektem, który wskazuję na aktualną
 
 ![Po operacji commit](./assets/img/git-commit-before.png)
 
-Usuwając lub dodając gałąź do repozytorium robimy tylko prostą operacje usunięcia lub dodania nowego obiektu wskazującego na bierzące miejsce, czyli ```HEAD```. Nie zaburzamy, ani nie przebudowujemy aktualnej struktury repozytorium.
+Usuwając lub dodając gałąź do repozytorium robimy tylko prostą operacje usunięcia lub dodania nowego obiektu wskazującego na bieżące miejsce, czyli ```HEAD```. Nie zaburzamy, ani nie przebudowujemy aktualnej struktury repozytorium.
 
-Równie łatwo można przesuwać wskaźnik gałęzi w aktualne miejsce. Spojrzmy na przykład:
+Równie łatwo można przesuwać wskaźnik gałęzi w aktualne miejsce. Spójrzmy na przykład:
 
-A -> B -> C -> HEAD (master)
-^--- poprawka59
-> **TODO:** Narysowć schemat
+![Diagram z dwoma gałęziami](./assets/img/git-branch-example1.png)
 
 Gałąź ```poprawka59``` ustawioną jest na wcześniejszej rewizji, jeśli chcemy ją przestawić na aktualne miejsce to możemy usunąć gałąź i od razu ją dodać lub też wystarczy tylko dodać gałęź ```poprawka59``` z opcją ```-f``` lub ```--force```
 
@@ -42,8 +40,7 @@ git branch -f poprawka59
 
 W wyniku otrzymamy następującą sytuację:
 
-A -> B -> C -> HEAD (master) (poprawka59)
-> **TODO:** Narysowć schemat
+![Diagram po przesunięciu gałęzi](./assets/img/git-branch-example2.png)
 
 # Przełączanie między gałęziami
 
@@ -106,7 +103,7 @@ git branch --no-merged
 
 ## Porządkowanie gałęzi zdalnych
 
-Aktualizacja zapamiętanej lokalnie listy zdalnych gałęzi w śledzonych zdalnych repozytoriach (prune cache)
+Aktualizacja zapamiętanej lokalnie listy zdalnych gałęzi w śledzonych zdalnych repozytoriach (```prune cache```)
 
 ```
 git fetch -p origin
@@ -115,7 +112,7 @@ git fetch --prune origin
 
 Angielski opis z dokumentacji ```fetch --prune```
 
-> Before fetching, remove any remote-tracking references that no longer exist on the remote. Tags are not subject to pruning if they are fetched only because of the default tag auto-following or due to a --tags option. However, if tags are fetched due to an explicit refspec (either on the command line or in the remote configuration, for example if the remote was cloned with the --mirror option), then they are also subject to pruning
+> ```Before fetching, remove any remote-tracking references that no longer exist on the remote. Tags are not subject to pruning if they are fetched only because of the default tag auto-following or due to a --tags option. However, if tags are fetched due to an explicit refspec (either on the command line or in the remote configuration, for example if the remote was cloned with the --mirror option), then they are also subject to pruning```
 
 Lista gałęzi lokalnych i zdalnych
 ```
