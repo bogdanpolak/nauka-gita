@@ -120,6 +120,42 @@ Git podobnie jak każdy system wersjonowania plików pozwala rozgałęziać hist
 
 ## Gałęzie zdalne
 
+W historii repozytorium poza wskaźnikami jakimi są gałęzie mogą występować zupełnie innego typu wskaźniki. Są one pobrane ze zdalnych repozytoriów przy pomocy operacji ```fetch``` lub ```pull```. W czasie powyższych operacji są pobierane informacje o pozycji gałęzi w zdalnym repozytorium. 
+
+Ta sama gałąź może wskazywać zupełnie inną rewizję w repozytorium lokalnym i inną zdalnym. Stąd gałęzie zdalne są nazywane z dodaniem jako prefiksu nazwy zdalnego repozytorium, czyli: {nazwa repozytorium}/{nazwa gałęzi}, na przykład: ```origin/master``` lub ```jankowalski/master```.
+
+Należy unikać nazywania gałęzi lokalnych nazwami w takim formacie, czyli lepiej w ogóle nie używać znaku ```/``` w nazwach gałęzi lokalnych, aby nie wprowadzać w błąd mniej doświadczonych użytkowników.
+
+Gałęzie zdalne są traktowane zupełnie inaczej niż gałęzie lokalne i zachowują się podobnie jak etykiety (tags). W efekcie nie można, na przykład, przełączyć ```HEAD``` na taką gałąź. Czyli po wywołaniu poniższego polecenia głowa zostanie przełączona na rewizję wskazywaną przez gałąź zdalną, ale będzie wskazywała bezpośrednio tą rewizję, a nie gałąź ```origin/master```.
+
+```
+git checkout origin/master
+```
+
+Dostajemy następującą sytuację, czyli odłączoną głowę.
+
+> **TODO:** Dodać schemat z odciętą głową na origin/master
+
+Stąd taką operację powinniśmy zrobić z opcją ```-b```, dodając nową gałąź lokalną, jeśli potrzebujemy wykonywać jakiś zmiany na tym miejscu.
+
+Jak są aktualizowane pozycje wskaźników zdalnych? 
+
+Aktualizacja taka jest robiona w momencie wysyłania zmian do zdalnego repozytorium, czyli podczas operacji ```git push```. W takiej sytuacji pozycja gałęzi zdalnej jest aktualizowana zgodnie z pozycją gałęzi lokalnej. Jeśli taka aktualizacja jest wg Gita groźna trzeba ją wymusić opcją ```-f```, tak jak w przykładzie:
+
+```
+git push -f origin master
+  # origin = zdalne repozytorium
+  # master = gałąź
+```
+
+Jednak warto uważać na tego typu operacje, aby nie utrudniać życia innym użytkownikom repozytorium. Zasadniczo lepiej tego nie robić na repozytoriach współdzielonych przez kilku programistów.
+
+Tak samo informacje o gałęzi zdalnej se pobierane podczas wykonania operacji:
+
+```
+git pull origin master
+```
+
 ## Porządkowanie gałęzi lokalnych
 
 Lista gałęzi scalonych z gałęzią główną (master) 
