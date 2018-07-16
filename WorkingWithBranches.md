@@ -1,12 +1,12 @@
 # Praca z gałęziami
 
 Tematy opisane w ramach artykułu:
-- Zarządzanie gałęziami
-- Przełączanie między gałęziami
-- Rozgałęzianie historii
-- Gałęzie zdalne **[[[w toku]]]**
-- Porządkowanie gałęzi lokalnych **[[[w toku]]]**
-- Porządkowanie gałęzi zdalnych **[[[w toku]]]**
+- [Zarządzanie gałęziami](#zarządzanie-gałęziami)
+- [Przełączanie między gałęziami](#przełączanie-między-gałęziami)
+- [Rozgałęzianie historii](#rozgałęzianie-historii)
+- [Gałęzie zdalne](#gałęzie-zdalne) **[[[w toku]]]**
+- [Porządkowanie gałęzi](#porządkowanie-gałęzi-lokalnych) lokalnych **[[[w toku]]]**
+- [Porządkowanie gałęzi zdalnych](#porządkowanie-gałęzi-zdalnych) **[[[w toku]]]**
 
 ## Zarządzanie gałęziami
 
@@ -120,7 +120,7 @@ Git podobnie jak każdy system wersjonowania plików pozwala rozgałęziać hist
 
 ## Gałęzie zdalne
 
-## Porządkowanie gałęzi lokalnych (usuwanie zbędnych)
+## Porządkowanie gałęzi lokalnych
 
 Lista gałęzi scalonych z gałęzią główną (master) 
 ```
