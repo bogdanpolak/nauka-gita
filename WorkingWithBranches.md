@@ -1,22 +1,36 @@
 # Praca z gałęziami
 
-## Tworzenie gałęzi
+Tematy opisane w ramach artykułu:
+- Zarządzanie gałęziami
+- Przełączanie między gałęziami
+- Rozgałęzianie historii
+- Gałęzie zdalne **[[[w toku]]]**
+- Porządkowanie gałęzi lokalnych **[[[w toku]]]**
+- Porządkowanie gałęzi zdalnych **[[[w toku]]]**
 
-Do tworzenia oraz do zarządzania gałęziami służy głównie polecenie ```git branch```. Dodanie nowej gałęzi można zlecić dodając nazwę gałęzi. Nazwa gałęzi musi być unikalna i nie może być powtórzona.
+## Zarządzanie gałęziami
+
+Do operacji pozwalających na zarządzanie gałęziami można zaliczyć:
+
+1. Tworzenie gałęzi
+2. Usuwanie gałęzi
+3. Przesuwanie gałęzi
+
+Do tworzenia oraz do zarządzania gałęziami służy głównie polecenie ```git branch```, aby dodać nową gałąź należy do tego polecenia dodać nazwę gałęzi, która musi być unikalna w ramach całego repozytorium. Przykładowe polecenie tworzące nową gałąź:
 
 ```
 git branch poprawka59
 ```
 
-Podobnie usunięcie gałęzi jest wykonuje się tym samym poleceniem dodając opcję ```-d``` lub ```--delete```.
+Podobnie usunięcie gałęzi jest wykonuje się tym samym poleceniem dodając opcję ```-d``` lub ```--delete```, tak jak na poniższym przykładzie:
 
 ```
 git branch -d poprawka59
 ```
 
-Usuwać w ten sposób nie można gałęzi, które nie zostały scalona z resztą drzewa. Blokada ta wynika z faktu, że taka gałąź może zniknąć z loga (historii zmian) jeśli usuniemy wskaźnik do niej (w tym wypadku takim wskaźnikiem jest gałąź). W artykule [Poruszanie się po historii](./MovingAroundHistory.md) opisuję, dlaczego tak się dzieje.
+Nie można w ten sposób usuwać gałęzi, które nie zostały scalona z resztą drzewa, czyli gdy ta gałąź nie zawiera się w historii innej gałęzi. Blokada ta wynika z faktu, że rewizje podczepione do takiej gałęzi mogą zniknąć z historii repozytorium po usunięciu jedynego wskaźnika do nich. Więcej informacji na  temat wskaźników do rewizji można znaleźć w artykule [Poruszanie się po historii](./MovingAroundHistory.md).
 
-Jeśli mimo powyższej blokady chcemy usunąć gałąź, która nie została scalona to taką operację musimy wymusić opcją ```--force``` lub ```-f```, w skrócie zamiast pisać ```-df``` możemy napisać ```-D```:
+Jeśli mimo powyższej blokady chcemy wykonać tą operację, czyli usunąć gałąź która nie została scalona z resztą drzewa to taką operację musimy wymusić opcją ```--force``` lub ```-f```, w skrócie można napisać ```-df``` lub jeszcze krócej ```-D```:
 
 ```
 git branch -D poprawka59
@@ -26,43 +40,64 @@ W strukturach repozytorium gałąź jest obiektem, który wskazuję na aktualną
 
 ![Po operacji commit](./assets/img/git-commit-before.png)
 
-Usuwając lub dodając gałąź do repozytorium robimy tylko prostą operacje usunięcia lub dodania nowego obiektu wskazującego na bieżące miejsce, czyli ```HEAD```. Nie zaburzamy, ani nie przebudowujemy aktualnej struktury repozytorium.
+Wskaźnik ```HEAD``` to bieżące miejsce, czyli miejsce w które są wstawiane nowe zmiany ```git commit``` oraz gdzie wykonywane są inne bieżące informacje, takie jak ```diff``` i wiele innych.
 
-Równie łatwo można przesuwać wskaźnik gałęzi w aktualne miejsce. Spójrzmy na przykład:
+Usuwając gałąź do repozytorium lub dodając ją robimy tylko prostą operacje usunięcia lub dodania nowego obiektu wskazującego pewną wersję. Bardzo ważne, że do jej ukończenia nigdy nie trzeba przebudowywać aktualnej struktury repozytorium.
+
+Równie łatwo jak dodawać/usuwać można także przesuwać gałąź na aktualną rewizję (```HEAD```). Spójrzmy na przykład:
 
 ![Diagram z dwoma gałęziami](./assets/img/git-branch-example1.png)
 
-Gałąź ```poprawka59``` ustawioną jest na wcześniejszej rewizji, jeśli chcemy ją przestawić na aktualne miejsce to możemy usunąć gałąź i od razu ją dodać lub też wystarczy tylko dodać gałęź ```poprawka59``` z opcją ```-f``` lub ```--force```
+Gałąź ```poprawka59``` ustawioną jest na wcześniejszej rewizji, jeśli chcemy ją przestawić na aktualne miejsce to możemy usunąć gałąź i od razu ją dodać:
+
+```
+git branch -d poprawka59
+git branch poprawka59
+```
+
+Dla uproszczenia operacji można zignorować wszystkie ostrzeżenia i dodać już istniejącą gałąź z opcją ```-f``` lub ```--force```:
 
 ```
 git branch -f poprawka59
 ```
 
-W wyniku otrzymamy następującą sytuację:
+W wyniku wywołanych poleceń przesuniemy gałąź na bieżącą wersję w historii rewizji:
 
 ![Diagram po przesunięciu gałęzi](./assets/img/git-branch-example2.png)
 
-# Przełączanie między gałęziami
+## Przełączanie między gałęziami
 
-Przełączenie między gałęziami wykonuje polecenie ```git checkout``` jak trzeci parametr podajemy nazwę gałęzi.
+Przełączenie między gałęziami wykonuje polecenie ```git checkout```. Gałąź na którą chcemy się przełączyć podajemy jako parametr:
 
 ```
 git checkout poprawka59
-# ... jesteśmy w gałęzi poprawka59
-#     możemy wykonać jakieś poprawki
-#     następnie zatwierdzić zmiany tworząc nową rewizję
-git checkout master
-# ... wracamy z powrotem do gałęzi master
-#     zmiany wprowadzone wcześniej znikają
 ```
 
-Polecenie ```git checkout``` pozwala natychmiast po przełączeniu utworzyć w tym miejscu nową gałąź (a dokładniej to utworzyć wskaźnik do nowej gałęzi). W tym celu wykorzystujemy opcję ```-b```. Takie zastosowanie ma sens szczególnie wtedy gdy przełączamy się na któraś z wybranych wcześniejszych wersji (podając jej identyfikator)
+Po wykonaniu tej operacji, głowa ```HEAD``` zostanie przestawiona na gałąź ```poprawka59```, czyli bieżące operacje będą wykonywane w tym miejscu: 
+
+![](./assets/img/git-checkout-step1.png)
+
+Po zatwierdzeniu zmian zostanie utworzona nowa rewizja, a wskaźnik gałęzi przesunięty na nią:
+
+![](./assets/img/git-checkout-step2.png)
+
+Kolejne przełączenie się na gałąź ```master```, spowoduje, że w plikach roboczych znikną wprowadzone wcześniej zmiany. Wywołujemy:
+ 
+```
+git checkout master
+```
+
+Głowa zostaje przełączona na gałąź ```master```, a pliki znajdujące się katalogu roboczym zostana zmodyfikowane tak, aby wyglądały tak jak wcześniej, czyli przed wprowadzoną zmianą. Jednak zmiany nie znikają na stałe, ponieważ są już utrwalone w repozytorium i każdej chwili można się na nie przełączyć wywołując polecenie ```git checkout poprawka59```
+
+Polecenie ```git checkout``` pozwala przełączyć ```HEAD``` na dowolną rewizję w repozytorium (nie tylko na którąś z gałęzi). W tym celu musimy znać identyfikator wersji lub jego skróconą wersję (7 znaków). Patrząc na przykłady podane wcześniej widać, że jedna z wcześniejszych rewizji identyfikowana jest skrótem: ```81ae807```. Przełączając się w takie miejsce powinniśmy równocześnie utworzyć nową gałąź w tym miejscu, aby nie otrzymać tzw. odczepionej głowy. Do utworznia nowej gałęzi służy opcja ```-b```:
 
 ```
 git checkout b8f9e20 -b eksperymencik
 ```
 
-Jeśli gałąź może już istnieć to trzeba ją wyczyścić i przestawić na bieżące miejsce, Można to zrobić przy pomocy operacji
+Więcej informacji o poruszaniu się po historii repozytorium oraz odczepionej głowie można znaleźć w artykule: [Poruszanie się po historii](./MovingAroundHistory.md).
+
+Jeśli gałąź może już istnieć to trzeba ją przestawić na bieżące czyli zresetować. Można to zrobić przy pomocy opcji ```-B```. Tak jak w przykładzie:
 
 ```
 git checkout -B patchBP
@@ -83,7 +118,7 @@ Git podobnie jak każdy system wersjonowania plików pozwala rozgałęziać hist
 
 ![Rozgałęziona historia](https://git-scm.com/book/en/v2/images/advance-master.png)
 
-## Gałęzie lokalne i zdalne
+## Gałęzie zdalne
 
 ## Porządkowanie gałęzi lokalnych (usuwanie zbędnych)
 
