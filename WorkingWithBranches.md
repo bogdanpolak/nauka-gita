@@ -114,9 +114,17 @@ git checkout patchBP
 
 Gałąź w Git to lekki obiekt (ma niewielki rozmiar), który wskazuje na najnowszą zmianę (rewizję). Wprowadzając zmianę raz w jednej gałęzi, a następnie w drugiej możemy rozgałęzić historię rewizji naszego repozytorium.
 
-Git podobnie jak każdy system wersjonowania plików pozwala rozgałęziać historię, jednak w tym przypadku jest to wyjątkowo lekka i bardzo bezpieczna operacja. Polega na stworzeniu w strukturach repozytorium nowego obiektu, który wskazuję aktualną rewizję. Obiekt ten nazywamy gałęzią (branch). Gałąź nie tworzy kopii swojej własnej historii, ale jedynie wskazuje miejsce w drzewie rewizji, czyli w historii repozytorium.
+Git podobnie jak każdy system wersjonowania plików pozwala rozgałęziać historię, co ważne w tym systemie jest to wyjątkowo lekka i bardzo bezpieczna operacja. Co zachęca do jej częstego używania. W systemach starszej generacji takich jak ```CVS``` lub ```Subversion``` jest to bardzo ciężka operacja, którą można używać tylko w niezbędnych sytuacjach.
 
-![Rozgałęziona historia](https://git-scm.com/book/en/v2/images/advance-master.png)
+W systemie Git rozgałęzienie polega na stworzeniu w strukturach repozytorium nowego obiektu - gałęzi, który wskazuję aktualną rewizję. Gałąź nie tworzy kopii swojej własnej historii i działa lokalnie, dzięki czemu jest wykonywana błyskawicznie.
+
+Aby rozgałęzić historię wystarczy przełączyć się na gałąź ustawioną gdzieś na starszej niż aktualna rewizji w historii repozytorium i zatwierdzić zmianę.
+
+![Rozgałęziona historia](./assets/img/git-history-branching.png)
+
+## Złączanie gałęzi
+
+> **TODO:** Wytłumaczyć jak działa merge i kiedy trzeba go używać (wspomnieć o przepisywaniu historii jako rozwiązaniu alternatywnym)
 
 ## Gałęzie zdalne
 
@@ -134,13 +142,13 @@ git checkout origin/master
 
 Dostajemy następującą sytuację, czyli odłączoną głowę.
 
-> **TODO:** Dodać schemat z odciętą głową na origin/master
+![Głowa odłączona po przełączeniu na origin/master](./assets/img/git-head-detached.png)
 
-Stąd taką operację powinniśmy zrobić z opcją ```-b```, dodając nową gałąź lokalną, jeśli potrzebujemy wykonywać jakiś zmiany na tym miejscu.
+Nie jest to zalecany stan i raczej powinno się unikać sytuacji gdy głowa nie wskazuje jednej z lokalnych gałęzi. Jeśli potrzebujemy wykonywać zmiany na tym miejscu to taką operację ```git checkout``` powinniśmy wykonać z opcją ```-b```, dodając nową gałąź.
 
-Jak są aktualizowane pozycje wskaźników zdalnych? 
+Już wspomniałem wcześniej jak są aktualizowane pozycje wskaźników zdalnych, 
 
-Aktualizacja taka jest robiona w momencie wysyłania zmian do zdalnego repozytorium, czyli podczas operacji ```git push```. W takiej sytuacji pozycja gałęzi zdalnej jest aktualizowana zgodnie z pozycją gałęzi lokalnej. Jeśli taka aktualizacja jest wg Gita groźna trzeba ją wymusić opcją ```-f```, tak jak w przykładzie:
+Pozycje gałęzi zdalnych są aktualizowane w zdalnym repozytorium w momencie wysyłania tam zmian, czyli podczas operacji ```git push```. W takiej sytuacji pozycja gałęzi zdalnej jest aktualizowana zgodnie z pozycją gałęzi lokalnej, pod warunkiem, że nie ma konfliktów z aktualną pozycją tej gałęzi na serwerze. Jeśli taki konflikt wystepuje to cała operacja jest uznawana za niebezpieczną i system odmawia jej wykonania. Gdy chcemy ją wykonać mimo wszystko to trzeba ją wymusić opcją ```-f```, tak jak w przykładzie:
 
 ```
 git push -f origin master
@@ -148,7 +156,7 @@ git push -f origin master
   # master = gałąź
 ```
 
-Jednak warto uważać na tego typu operacje, aby nie utrudniać życia innym użytkownikom repozytorium. Zasadniczo lepiej tego nie robić na repozytoriach współdzielonych przez kilku programistów.
+Choć czasami wykonanie takiej operacji jest konieczne to jednak lepiej jej unikać, aby nie utrudniać życia innym użytkownikom repozytorium. Zasadniczo nie należy tego robić na repozytoriach współdzielonych przez kilku programistów. Zawsze można złączyć obie gałęzie
 
 Tak samo informacje o gałęzi zdalnej se pobierane podczas wykonania operacji:
 
