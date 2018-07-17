@@ -4,7 +4,8 @@ Tematy opisane w ramach artykułu:
 - [Zarządzanie gałęziami](#zarządzanie-gałęziami)
 - [Przełączanie między gałęziami](#przełączanie-między-gałęziami)
 - [Rozgałęzianie historii](#rozgałęzianie-historii)
-- [Gałęzie zdalne](#gałęzie-zdalne) **[[[w toku]]]**
+- [Złączanie gałęzi](#złączanie-gałęzi)
+- [Gałęzie zdalne](#gałęzie-zdalne)
 - [Porządkowanie gałęzi](#porządkowanie-gałęzi-lokalnych) lokalnych **[[[w toku]]]**
 - [Porządkowanie gałęzi zdalnych](#porządkowanie-gałęzi-zdalnych) **[[[w toku]]]**
 
@@ -123,6 +124,12 @@ Aby rozgałęzić historię wystarczy przełączyć się na gałąź ustawioną 
 ![Rozgałęziona historia](./assets/img/git-history-branching.png)
 
 ## Złączanie gałęzi
+
+Zapewne w krótkim czasie po rozgałęzieniu historii konieczne okaże się jej złączenie, aby lepiej na czym polega rozstrzyganie konfliktów podczas scalania gałęzi rozpatrzmy opisany dalej scenariusz.
+
+Wcześniej stworzyliśmy gałąź ```poprawka59``` przeznaczoną do przygotowania łatki dla błędu nr 59. Przyjmijmy, że do zrealizowania tego zadania potrzebne były dwie rewizje (na diagramie poniżej są to rewizje ```6ede961``` oraz ```51e7151```). Teraz chcemy scalić te zmiany z gałęzią główną, ale w między czasie pojawiła się w niej nowa rewizja (```f3137c0```). Niestety zwykłe przepisanie zmian do gałęzi głównej ```master``` nie jest możliwe, ponieważ modyfikowane były te same pliki w obu gałęziach. W takiej sytuacji musi dojść do trójstronnego scalenia.
+
+![Git: trójstronne scalanie](./assets/img/git-three-way-merge.png)
 
 > **TODO:** Wytłumaczyć jak działa merge i kiedy trzeba go używać (wspomnieć o przepisywaniu historii jako rozwiązaniu alternatywnym)
 
