@@ -66,22 +66,29 @@ Równie łatwo jak dodawać/usuwać można także przesuwać gałąź na aktualn
 
 ![Diagram z dwoma gałęziami](./assets/img/git-branch-example1.png)
 
+
 Gałąź ```poprawka59``` ustawioną jest na wcześniejszej rewizji, jeśli chcemy ją przestawić na aktualne miejsce to możemy usunąć gałąź i od razu ją dodać:
+
 
 ```
 git branch -d poprawka59
 git branch poprawka59
 ```
 
+
 Dla uproszczenia operacji można zignorować wszystkie ostrzeżenia i dodać już istniejącą gałąź z opcją ```-f``` lub ```--force```:
+
 
 ```
 git branch -f poprawka59
 ```
 
+
 W wyniku wywołanych poleceń przesuniemy gałąź na bieżącą wersję w historii rewizji:
 
+
 ![Diagram po przesunięciu gałęzi](./assets/img/git-branch-example2.png)
+
 
 ## Przełączanie między gałęziami
 
