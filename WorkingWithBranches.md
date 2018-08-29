@@ -10,6 +10,7 @@ Tematy opisane w ramach artykułu:
 - [Porządkowanie gałęzi](#porządkowanie-gałęzi-lokalnych) lokalnych **[[[w toku]]]**
 - [Porządkowanie gałęzi zdalnych](#porządkowanie-gałęzi-zdalnych) **[[[w toku]]]**
 
+
 ## Zarządzanie gałęziami
 
 Do operacji pozwalających na zarządzanie gałęziami można zaliczyć:
