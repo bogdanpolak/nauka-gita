@@ -13,41 +13,56 @@ Tematy opisane w ramach artykułu:
 
 ## Zarządzanie gałęziami
 
+
 Do operacji pozwalających na zarządzanie gałęziami można zaliczyć:
+
 
 1. Tworzenie gałęzi
 2. Usuwanie gałęzi
 3. Przesuwanie gałęzi
 
+
 Do tworzenia oraz do zarządzania gałęziami służy głównie polecenie ```git branch```, aby dodać nową gałąź należy do tego polecenia dodać nazwę gałęzi, która musi być unikalna w ramach całego repozytorium. Przykładowe polecenie tworzące nową gałąź:
+
 
 ```
 git branch poprawka59
 ```
 
+
 Podobnie usunięcie gałęzi jest wykonuje się tym samym poleceniem dodając opcję ```-d``` lub ```--delete```, tak jak na poniższym przykładzie:
+
 
 ```
 git branch -d poprawka59
 ```
 
+
 Nie można w ten sposób usuwać gałęzi, które nie zostały scalona z resztą drzewa, czyli gdy ta gałąź nie zawiera się w historii innej gałęzi. Blokada ta wynika z faktu, że rewizje podczepione do takiej gałęzi mogą zniknąć z historii repozytorium po usunięciu jedynego wskaźnika do nich. Więcej informacji na  temat wskaźników do rewizji można znaleźć w artykule [Poruszanie się po historii](./MovingAroundHistory.md).
 
+
 Jeśli mimo powyższej blokady chcemy wykonać tą operację, czyli usunąć gałąź która nie została scalona z resztą drzewa to taką operację musimy wymusić opcją ```--force``` lub ```-f```, w skrócie można napisać ```-df``` lub jeszcze krócej ```-D```:
+
 
 ```
 git branch -D poprawka59
 ```
 
+
 W strukturach repozytorium gałąź jest obiektem, który wskazuję na aktualną rewizję, z kolei ta rewizja wskazuje na wcześniejszą rewizję (wersję) itd. Czyli struktura przykładowego repozytorium z jedną gałęzią ```master``` mogłaby wyglądać w ten sposób:
+
 
 ![Po operacji commit](./assets/img/git-commit-before.png)
 
+
 Wskaźnik ```HEAD``` to bieżące miejsce, czyli miejsce w które są wstawiane nowe zmiany ```git commit``` oraz gdzie wykonywane są inne bieżące informacje, takie jak ```diff``` i wiele innych.
+
 
 Usuwając gałąź do repozytorium lub dodając ją robimy tylko prostą operacje usunięcia lub dodania nowego obiektu wskazującego pewną wersję. Bardzo ważne, że do jej ukończenia nigdy nie trzeba przebudowywać aktualnej struktury repozytorium.
 
+
 Równie łatwo jak dodawać/usuwać można także przesuwać gałąź na aktualną rewizję (```HEAD```). Spójrzmy na przykład:
+
 
 ![Diagram z dwoma gałęziami](./assets/img/git-branch-example1.png)
 
