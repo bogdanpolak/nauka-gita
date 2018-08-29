@@ -1,5 +1,6 @@
 # Praca z gałęziami
 
+
 Tematy opisane w ramach artykułu:
 - [Zarządzanie gałęziami](#zarządzanie-gałęziami)
 - [Przełączanie między gałęziami](#przełączanie-między-gałęziami)
