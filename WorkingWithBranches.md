@@ -1,6 +1,5 @@
 # Praca z gałęziami
 
-
 Tematy opisane w ramach artykułu:
 - [Zarządzanie gałęziami](#zarządzanie-gałęziami)
 - [Przełączanie między gałęziami](#przełączanie-między-gałęziami)
@@ -10,25 +9,19 @@ Tematy opisane w ramach artykułu:
 - [Porządkowanie gałęzi](#porządkowanie-gałęzi-lokalnych) lokalnych **[[[w toku]]]**
 - [Porządkowanie gałęzi zdalnych](#porządkowanie-gałęzi-zdalnych) **[[[w toku]]]**
 
-
 ## Zarządzanie gałęziami
 
-
 Do operacji pozwalających na zarządzanie gałęziami można zaliczyć:
-
 
 1. Tworzenie gałęzi
 2. Usuwanie gałęzi
 3. Przesuwanie gałęzi
 
-
 Do tworzenia oraz do zarządzania gałęziami służy głównie polecenie ```git branch```, aby dodać nową gałąź należy do tego polecenia dodać nazwę gałęzi, która musi być unikalna w ramach całego repozytorium. Przykładowe polecenie tworzące nową gałąź:
-
 
 ```
 git branch poprawka59
 ```
-
 
 Podobnie usunięcie gałęzi jest wykonuje się tym samym poleceniem dodając opcję ```-d``` lub ```--delete```, tak jak na poniższym przykładzie:
 
