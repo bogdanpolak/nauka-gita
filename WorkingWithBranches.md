@@ -32,63 +32,46 @@ git branch poprawka59
 
 Podobnie usunięcie gałęzi jest wykonuje się tym samym poleceniem dodając opcję ```-d``` lub ```--delete```, tak jak na poniższym przykładzie:
 
-
 ```
 git branch -d poprawka59
 ```
 
-
 Nie można w ten sposób usuwać gałęzi, które nie zostały scalona z resztą drzewa, czyli gdy ta gałąź nie zawiera się w historii innej gałęzi. Blokada ta wynika z faktu, że rewizje podczepione do takiej gałęzi mogą zniknąć z historii repozytorium po usunięciu jedynego wskaźnika do nich. Więcej informacji na  temat wskaźników do rewizji można znaleźć w artykule [Poruszanie się po historii](./MovingAroundHistory.md).
 
-
 Jeśli mimo powyższej blokady chcemy wykonać tą operację, czyli usunąć gałąź która nie została scalona z resztą drzewa to taką operację musimy wymusić opcją ```--force``` lub ```-f```, w skrócie można napisać ```-df``` lub jeszcze krócej ```-D```:
-
 
 ```
 git branch -D poprawka59
 ```
 
-
 W strukturach repozytorium gałąź jest obiektem, który wskazuję na aktualną rewizję, z kolei ta rewizja wskazuje na wcześniejszą rewizję (wersję) itd. Czyli struktura przykładowego repozytorium z jedną gałęzią ```master``` mogłaby wyglądać w ten sposób:
-
 
 ![Po operacji commit](./assets/img/git-commit-before.png)
 
-
 Wskaźnik ```HEAD``` to bieżące miejsce, czyli miejsce w które są wstawiane nowe zmiany ```git commit``` oraz gdzie wykonywane są inne bieżące informacje, takie jak ```diff``` i wiele innych.
-
 
 Usuwając gałąź do repozytorium lub dodając ją robimy tylko prostą operacje usunięcia lub dodania nowego obiektu wskazującego pewną wersję. Bardzo ważne, że do jej ukończenia nigdy nie trzeba przebudowywać aktualnej struktury repozytorium.
 
-
 Równie łatwo jak dodawać/usuwać można także przesuwać gałąź na aktualną rewizję (```HEAD```). Spójrzmy na przykład:
-
 
 ![Diagram z dwoma gałęziami](./assets/img/git-branch-example1.png)
 
-
 Gałąź ```poprawka59``` ustawioną jest na wcześniejszej rewizji, jeśli chcemy ją przestawić na aktualne miejsce to możemy usunąć gałąź i od razu ją dodać:
-
 
 ```
 git branch -d poprawka59
 git branch poprawka59
 ```
 
-
 Dla uproszczenia operacji można zignorować wszystkie ostrzeżenia i dodać już istniejącą gałąź z opcją ```-f``` lub ```--force```:
-
 
 ```
 git branch -f poprawka59
 ```
 
-
 W wyniku wywołanych poleceń przesuniemy gałąź na bieżącą wersję w historii rewizji:
 
-
 ![Diagram po przesunięciu gałęzi](./assets/img/git-branch-example2.png)
-
 
 ## Przełączanie między gałęziami
 
