@@ -14,5 +14,4 @@ Jak to zrobić w Git'cie?
 
 1. Łączenie kilku repozytoriów z utrzymaniem historii rewizji
 
-> Ćwiczenia zapożyczone z wykładu Magnusa Stahre z konferencji TechBash 2018
-> [Źródło](https://www.techbash.com/sessions/git-gone-wild-how-to-recover-from-common-git-mistakes)
+> Ćwiczenia zapożyczone z wykładu Magnusa Stahre z konferencji TechBash 2018. [Źródło](https://www.techbash.com/sessions/git-gone-wild-how-to-recover-from-common-git-mistakes)
