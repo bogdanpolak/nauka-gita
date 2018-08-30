@@ -2,7 +2,7 @@
 
 Jak to zrobić w Git'cie?
 
-1. Korekta literów i błędów ortograficznych w opisie rewizji
+1. Korekta literówek i błędów ortograficznych w opisie rewizji
 2. Podzielenie większej rewizji na kilka mniejszych, ze względu na bardziej logiczny układ historii
 3. Łączenie kilku rewizji w jedną większą
 4. Przywracanie bazy w sytuacji gdy rozgałęzienie nastąpiło z nie odpowiedniej gałęzi 
