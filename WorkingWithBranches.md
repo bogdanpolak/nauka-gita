@@ -92,9 +92,7 @@ W wyniku wywołanych poleceń przesuniemy gałąź na bieżącą wersję w histo
 
 ## Przełączanie między gałęziami
 
-
 Przełączenie między gałęziami wykonuje polecenie ```git checkout```. Gałąź na którą chcemy się przełączyć podajemy jako parametr:
-
 
 ```
 git checkout poprawka59
