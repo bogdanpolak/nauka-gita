@@ -9,6 +9,9 @@ Notatki mają mi pomóc w utrwaleniu kluczowych informacji na temat systemu Git.
 * [Modyfikacja historii repozytorium](./HistoryModification.md)
 * [Praca z etykietami](./UsingTags.md)
 
+# Ćwiczenia
+* [Ćwiczenia z Git'a zapożyczone](./Exercises.md)
+
 # Notatki
 
 * [Notatki z GitPro](./GitProNotes.md)
